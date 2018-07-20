@@ -1,0 +1,51 @@
+<div>
+    
+    #include <span><</span>ESP8266HTTPClient.h<span>></span><br>
+    #include <span><</span>ESP8266WiFi.h<span>></span><br>
+    String value;<br>
+    int call()<br>
+    {<br>
+        int a=random(0,1000);<br>
+        return a;<br>
+    }<br>
+    void setup()<br> 
+    {<br>
+
+    Serial.begin(115200);<br>
+    WiFi.begin("SSID", "PASSWORD");<br>
+    while (WiFi.status() != WL_CONNECTED) <br>
+    {  <br>
+        delay(500);<br>
+        Serial.println("Waiting for connection");<br>
+
+    }<br>
+
+    }<br>
+
+    void loop()<br> 
+    {<br>
+
+    if(WiFi.status()== WL_CONNECTED)<br>
+    {   <br>
+
+    HTTPClient http;<br>
+
+    http.begin("http://192.168.0.6:8000/APIKEY");<br>
+    http.addHeader("Content-Type", "application/json"); <br>
+    value=call();<br>
+    int httpCode = http.POST(value); <br>
+    String payload = http.getString(); <br>
+    Serial.println(httpCode);   <br>
+    Serial.println(payload);    <br>
+    http.end();  <br>
+    }   <br>
+    else<br>
+    {<br>
+    Serial.println("Error in WiFi connection");   <br>
+    }<br>
+
+    delay(1000);  <br>
+
+    }<br>
+    
+</div>

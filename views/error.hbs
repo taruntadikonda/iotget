@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link href="/c3/c3.css" rel="stylesheet">
+  <script src="/c3/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+
+  <script src="/c3/c3.min.js"></script>
+  <script>var a=[];</script>
+</head>
+<body>
+  <header>
+  <nav class="mobile" id="mobile">
+      <div class="hamburger" >
+        <div class="line line1" id ="line1"></div>
+        <div class="line line2" id ="line2"></div>
+        <div class="line line3" id ="line3"></div>
+      </div>
+
+  </nav>
+
+  <nav class="desktop">
+    <div class="wrapper">
+      <div class="brand">
+
+      </div>
+
+      <div class="desktop-menu">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/getapikey">GET API</a></li>
+          <li><a href="/showdata">VISUALIZE</a></li>
+          <li><a href="/code">ARDUINO SOURCE CODE</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<script src="/chat.js"></script>
+  <div>
+    {{{body}}}
+  </div>
+</body>
+</html>

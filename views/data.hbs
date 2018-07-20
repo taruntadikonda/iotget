@@ -1,0 +1,22 @@
+<br><br><br><br>
+
+<div id="chart"></div>
+<script>
+    a=['data1'];
+    {{#if data}}
+        {{#each data}}
+            a.push({{this}});
+        {{/each}}
+    {{/if}}
+    console.log(a);
+    var chart = c3.generate({
+    bindto: '#chart',
+    data: {
+        columns: [a],
+        colors: {
+            data1: '#7FFF00'
+        }
+    }
+    
+});
+</script>
