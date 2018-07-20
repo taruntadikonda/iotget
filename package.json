@@ -1,6 +1,6 @@
 {
-  "name": "get",
-  "version": "0.0.0",
+  "name": "iotget",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node app.js"
